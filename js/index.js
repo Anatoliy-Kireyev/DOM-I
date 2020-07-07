@@ -121,6 +121,17 @@ pText2[2].textContent ='sales@greatidea.io'
 const cRight = document.querySelector('footer p')
 console.log(cRight)
 cRight.textContent = 'Copyright Great Idea! 2018'
+//Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+//append
+//prepend
+const nav = document.querySelector('nav');
+const newA = document.createElement('a')
+const newA2 = document.createElement('a')
+newA.textContent = 'Hello Dom!'
+newA2.textContent = 'Goodbye JS!'
+nav.appendChild(newA)
+nav.prepend(newA2)
+console.log(newA)
 // Change the color of the navigation text to be green.
 
 const header = document.querySelectorAll('.container a')
@@ -130,14 +141,3 @@ header.forEach(link => {
      link.style.color = 'green'
    })
 
-   //Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-const nav = document.querySelector('nav');
-const newA = document.createElement('a')
-newA.textContent = 'Hello Dom!'
-nav.appendChild(newA)
-console.log(newA)
-//prepending
-const foot = document.querySelector('footer');
-const newC = document.createElement('p')
-newC.textContent = 'Privacy'
-foot.prepend(newC)
